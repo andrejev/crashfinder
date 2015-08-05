@@ -1,18 +1,7 @@
 package de.hdu.pvs.crashfinder.analysis;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 import com.ibm.wala.ipa.slicer.Slicer.ControlDependenceOptions;
 import com.ibm.wala.ipa.slicer.Slicer.DataDependenceOptions;
@@ -22,8 +11,10 @@ import com.ibm.wala.util.CancelException;
 import com.ibm.wala.util.WalaException;
 
 import de.hdu.pvs.crashfinder.util.WALAUtils;
+import de.hdu.pvs.crashfinder.analysis.FindSeed;
 
 public class SlicerMain {
+
 
 	/**
 	 * @param args
@@ -37,11 +28,15 @@ public class SlicerMain {
 			WalaException, IOException, CancelException,
 			InvalidClassFileException {
 
-		String classPath = "../../hadoop/Hdfs3856/2/share/hadoop/hdfs/hadoop-hdfs-3.0.0-SNAPSHOT.jar";
+		String classPath = "/home/felix/hadoop/Hdfs3856/2/share/hadoop/hdfs/hadoop-hdfs-3.0.0-SNAPSHOT.jar";
 		String fileName = "dumpslice.txt";
 		String mainClass = "Lorg/apache/hadoop/hdfs/server/namenode/NameNode";
-		String exclusionFile = "dat/JavaAllExclusions.txt";
-		
+		String exclusionFile = "src/resources/JavaAllExclusions.txt";
+		String failedLogFile = "src/resources/stackTraceFail.log";
+		FindSeed computeSeed= new FindSeed();
+		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
+		String seedClass = computeSeed.computeSeed(failedLogFile).getSeedClass();
+
 		Slicing helper = new Slicing(classPath, mainClass, exclusionFile);
 		helper.CallGraphBuilder();
 		helper.setExclusionFile(exclusionFile);
@@ -49,10 +44,7 @@ public class SlicerMain {
 		helper.setControlDependenceOptions(ControlDependenceOptions.NO_EXCEPTIONAL_EDGES);
 		helper.setContextSensitive(true); // context-insensitive
 
-		Statement s = helper
-				.extractStatementfromException(
-						"org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
-						759);
+		Statement s = helper.extractStatementfromException(seedClass, lineNumber);
 		Collection<Statement> slice = null;
 		System.out.println("--- backward ---");
 		slice = helper.computeSlice(s);

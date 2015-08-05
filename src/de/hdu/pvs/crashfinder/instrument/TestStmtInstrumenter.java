@@ -18,6 +18,7 @@ import com.ibm.wala.ipa.slicer.Statement;
 import com.ibm.wala.ipa.slicer.Slicer.ControlDependenceOptions;
 import com.ibm.wala.ipa.slicer.Slicer.DataDependenceOptions;
 
+import de.hdu.pvs.crashfinder.analysis.FindSeed;
 import de.hdu.pvs.crashfinder.analysis.IRStatement;
 import de.hdu.pvs.crashfinder.analysis.Slicing;
 import de.hdu.pvs.crashfinder.analysis.SlicingOutput;
@@ -34,9 +35,14 @@ public class TestStmtInstrumenter extends TestCase {
 		String fileName = "/home/felix/workspace/dumpslice.txt";
 		String diffout = "/home/felix/workspace/diffout.diff";
 		String diff = "/home/felix/workspace/log.diff";
-		String mainClass = "Lorg/apache/hadoop/hdfs/server/namenode/NameNode";
+		String mainClass = "";
 		String exclusionFile = "/home/felix/workspace/regressionFaultLocalizer/src/resources/JavaAllExclusions.txt";
-
+		String failedLogFile = "src/resources/stackTraceFail.log";
+		
+		FindSeed computeSeed= new FindSeed();
+		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
+		String seedClass = computeSeed.computeSeed(failedLogFile).getSeedClass();
+		
 		BufferedReader br = null;
 		String sCurrentLine;
 		PrintWriter output = null;
@@ -49,9 +55,8 @@ public class TestStmtInstrumenter extends TestCase {
 		helper.setControlDependenceOptions(ControlDependenceOptions.NO_EXCEPTIONAL_EDGES);
 		helper.setContextSensitive(true); // context-insensitive
 
-		Statement s = helper.extractStatementfromException(
-				"org.apache.hadoop.hdfs.server.namenode.FSNamesystem",
-				755);
+		Statement s = helper.extractStatementfromException(seedClass, lineNumber);
+
 		Collection<Statement> slice = null;
 		System.out.println("--- backward ---");
 		slice = helper.computeSlice(s);
