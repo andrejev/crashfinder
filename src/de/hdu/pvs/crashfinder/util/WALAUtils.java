@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Properties;
+//import java.util.Properties;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -21,40 +21,40 @@ import java.util.zip.ZipEntry;
 import com.ibm.wala.classLoader.IClass;
 import com.ibm.wala.classLoader.IMethod;
 import com.ibm.wala.classLoader.ShrikeBTMethod;
-import com.ibm.wala.core.tests.callGraph.CallGraphTestUtil;
-import com.ibm.wala.examples.drivers.PDFSlice;
-import com.ibm.wala.examples.drivers.PDFTypeHierarchy;
-import com.ibm.wala.examples.properties.WalaExamplesProperties;
+//import com.ibm.wala.core.tests.callGraph.CallGraphTestUtil;
+//import com.ibm.wala.examples.drivers.PDFSlice;
+//import com.ibm.wala.examples.drivers.PDFTypeHierarchy;
+//import com.ibm.wala.examples.properties.WalaExamplesProperties;
 import com.ibm.wala.ipa.callgraph.AnalysisCache;
 import com.ibm.wala.ipa.callgraph.AnalysisOptions;
 import com.ibm.wala.ipa.callgraph.AnalysisScope;
 import com.ibm.wala.ipa.callgraph.CGNode;
-import com.ibm.wala.ipa.callgraph.CallGraph;
+//import com.ibm.wala.ipa.callgraph.CallGraph;
 import com.ibm.wala.ipa.callgraph.impl.Util;
-import com.ibm.wala.ipa.callgraph.propagation.LocalPointerKey;
+//import com.ibm.wala.ipa.callgraph.propagation.LocalPointerKey;
 import com.ibm.wala.ipa.callgraph.propagation.SSAPropagationCallGraphBuilder;
 import com.ibm.wala.ipa.callgraph.propagation.cfa.nCFABuilder;
 import com.ibm.wala.ipa.cha.ClassHierarchy;
-import com.ibm.wala.ipa.cha.ClassHierarchyException;
+//import com.ibm.wala.ipa.cha.ClassHierarchyException;
 import com.ibm.wala.ipa.cha.IClassHierarchy;
 import com.ibm.wala.ipa.slicer.NormalStatement;
-import com.ibm.wala.ipa.slicer.SDG;
+//import com.ibm.wala.ipa.slicer.SDG;
 import com.ibm.wala.ipa.slicer.Statement;
-import com.ibm.wala.properties.WalaProperties;
+//import com.ibm.wala.properties.WalaProperties;
 import com.ibm.wala.shrikeBT.MethodData;
 import com.ibm.wala.ssa.SSAInstruction;
 import com.ibm.wala.types.ClassLoaderReference;
 import com.ibm.wala.types.TypeName;
-import com.ibm.wala.util.WalaException;
-import com.ibm.wala.util.collections.CollectionFilter;
-import com.ibm.wala.util.collections.Filter;
-import com.ibm.wala.util.config.AnalysisScopeReader;
-import com.ibm.wala.util.debug.Assertions;
+//import com.ibm.wala.util.WalaException;
+//import com.ibm.wala.util.collections.CollectionFilter;
+//import com.ibm.wala.util.collections.Filter;
+//import com.ibm.wala.util.config.AnalysisScopeReader;
+//import com.ibm.wala.util.debug.Assertions;
 import com.ibm.wala.util.graph.Graph;
-import com.ibm.wala.util.graph.GraphSlicer;
-import com.ibm.wala.util.io.FileProvider;
-import com.ibm.wala.viz.DotUtil;
-import com.ibm.wala.viz.PDFViewUtil;
+//import com.ibm.wala.util.graph.GraphSlicer;
+//import com.ibm.wala.util.io.FileProvider;
+//import com.ibm.wala.viz.DotUtil;
+//import com.ibm.wala.viz.PDFViewUtil;
 
 
 public class WALAUtils {
@@ -106,7 +106,7 @@ public class WALAUtils {
 		    Log.log(sb.toString());
 	}
 	
-	  //FIXME buyer aware
+/*	  //FIXME buyer aware
 	  public static Graph<CGNode> copy(Graph<CGNode> g) throws WalaException {
 		  return pruneGraph(g, new AcceptAllFilter());
 	  }
@@ -140,7 +140,7 @@ public class WALAUtils {
 	        return false;
 	      }
 	    }
-	  }
+	  }*/
 	  
 	  //give method full name like a.b.c.ClassName.method, return the CGNode
 	  public static Collection<CGNode> lookupCGNode(Graph<CGNode> cg, String fullName) {
@@ -448,42 +448,42 @@ public class WALAUtils {
 	    	return filteredNodes;
 	    }
 	    
-	    public static void viewSDG(SDG sdg, Collection<Statement> slice,
-			String pdfFile) throws WalaException {
-	    	// create a view of the SDG restricted to nodes in the slice
-			Graph<Statement> g = pruneSDG(sdg, slice);
+//	    public static void viewSDG(SDG sdg, Collection<Statement> slice,
+//			String pdfFile) throws WalaException {
+//	    	// create a view of the SDG restricted to nodes in the slice
+//			Graph<Statement> g = pruneSDG(sdg, slice);
+//
+//			System.out.println("Number of statements: " + g.getNumberOfNodes());
+//
+//			// load Properties from standard WALA and the WALA examples project
+//			Properties p = null;
+//			try {
+//				p = WalaExamplesProperties.loadProperties();
+//				p.putAll(WalaProperties.loadProperties());
+//			} catch (WalaException e) {
+//				e.printStackTrace();
+//				Assertions.UNREACHABLE();
+//			}
+//			// create a dot representation.
+//			String psFile = p.getProperty(WalaProperties.OUTPUT_DIR)
+//					+ File.separatorChar + pdfFile;
+//			String dotExe = p.getProperty(WalaExamplesProperties.DOT_EXE);
+//			DotUtil.dotify(g, PDFSlice.makeNodeDecorator(),
+//					PDFTypeHierarchy.DOT_FILE, psFile, dotExe);
+//
+//			// fire off the PDF viewer
+//			String gvExe = p.getProperty(WalaExamplesProperties.PDFVIEW_EXE);
+//			PDFViewUtil.launchPDFView(psFile, gvExe);
+//	    }
 
-			System.out.println("Number of statements: " + g.getNumberOfNodes());
-
-			// load Properties from standard WALA and the WALA examples project
-			Properties p = null;
-			try {
-				p = WalaExamplesProperties.loadProperties();
-				p.putAll(WalaProperties.loadProperties());
-			} catch (WalaException e) {
-				e.printStackTrace();
-				Assertions.UNREACHABLE();
-			}
-			// create a dot representation.
-			String psFile = p.getProperty(WalaProperties.OUTPUT_DIR)
-					+ File.separatorChar + pdfFile;
-			String dotExe = p.getProperty(WalaExamplesProperties.DOT_EXE);
-			DotUtil.dotify(g, PDFSlice.makeNodeDecorator(),
-					PDFTypeHierarchy.DOT_FILE, psFile, dotExe);
-
-			// fire off the PDF viewer
-			String gvExe = p.getProperty(WalaExamplesProperties.PDFVIEW_EXE);
-			PDFViewUtil.launchPDFView(psFile, gvExe);
-	    }
-
-	    public static Graph<Statement> pruneSDG(SDG sdg,
-			final Collection<Statement> slice) {
-	    	Filter<Statement> f = new Filter<Statement>() {
-				public boolean accepts(Statement o) {
-					// return true;
-					return slice.contains(o);
-				}
-			};
-			return GraphSlicer.prune(sdg, f);
-	    }
+//	    public static Graph<Statement> pruneSDG(SDG sdg,
+//			final Collection<Statement> slice) {
+//	    	Filter<Statement> f = new Filter<Statement>() {
+//				public boolean accepts(Statement o) {
+//					// return true;
+//					return slice.contains(o);
+//				}
+//			};
+//			return GraphSlicer.prune(sdg, f);
+//	    }
 }

@@ -29,9 +29,9 @@ public abstract class AbstractInstrumenter {
 	public void instrument(String inputElement, String outputJar)
 			throws Exception {
 		System.out.println("start instrumentating");
-		instrumenter = new OfflineInstrumenter();
+		instrumenter = new OfflineInstrumenter(disasm);
 		Writer w = new BufferedWriter(new FileWriter("report", false));
-		instrumenter.addInputElement(inputElement);
+		instrumenter.addInputElement(null, inputElement);
 		instrumenter.setOutputJar(new File(outputJar));
 		instrumenter.setPassUnmodifiedClasses(true);
 		instrumenter.beginTraversal();

@@ -30,13 +30,13 @@ import junit.framework.TestCase;
 public class TestStmtInstrumenter extends TestCase {
 	public void testSimpleInstrumenter() throws Exception {
 
-		String dir = "/home/felix/hadoop/hdfs3856/4/share/hadoop/hdfs/";
+		String dir = "/home/felix/hadoop/Hdfs3856/2/share/hadoop/hdfs/";
 		String classPath = dir + "hadoop-hdfs-3.0.0-SNAPSHOT.jar";
-		String fileName = "/home/felix/workspace/dumpslice.txt";
+		String fileName = "dumpslice.txt";
 		String diffout = "/home/felix/workspace/diffout.diff";
 		String diff = "/home/felix/workspace/log.diff";
-		String mainClass = "";
-		String exclusionFile = "/home/felix/workspace/regressionFaultLocalizer/src/resources/JavaAllExclusions.txt";
+		String mainClass = "Lorg/apache/hadoop/hdfs/server/namenode/NameNode";
+		String exclusionFile = "src/resources/JavaAllExclusions.txt";
 		String failedLogFile = "src/resources/stackTraceFail.log";
 		
 		FindSeed computeSeed= new FindSeed();

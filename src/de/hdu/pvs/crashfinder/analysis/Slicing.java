@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 
-import com.ibm.wala.core.tests.callGraph.CallGraphTestUtil;
+//import com.ibm.wala.core.tests.callGraph.CallGraphTestUtil;
 import com.ibm.wala.ipa.callgraph.AnalysisCache;
 import com.ibm.wala.ipa.callgraph.AnalysisOptions;
 import com.ibm.wala.ipa.callgraph.AnalysisScope;
@@ -101,8 +101,9 @@ public class Slicing {
 			// this.entrypoints = com.ibm.wala.ipa.callgraph.impl.Util
 			// .makeMainEntrypoints(scope, cha, mainClass);
 			this.entrypoints = new AllApplicationEntrypoints(scope, cha);
-			this.options = CallGraphTestUtil.makeAnalysisOptions(scope,
-					entrypoints);
+			//this.options = CallGraphTestUtil.makeAnalysisOptions(scope,
+			//		entrypoints);
+			this.options =  new AnalysisOptions(scope, entrypoints);
 
 			// build the call graph
 			System.out.println("Building call graph...");

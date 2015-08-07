@@ -36,7 +36,7 @@ public class FindSeed {
 		    	break;
 		    }
 		}
-		String rawSeed = stackFrames.get(stackFrames.size()-2);
+		String rawSeed = stackFrames.get(stackFrames.size()-4);
 		
 	
 		String classFile = rawSeed.split(".java:")[0].split("\\(")[1];

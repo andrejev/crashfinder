@@ -1,7 +1,7 @@
 package de.hdu.pvs.crashfinder.instrument;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+//import java.io.BufferedWriter;
+//import java.io.FileWriter;
 import java.io.PrintStream;
 import java.io.Writer;
 
