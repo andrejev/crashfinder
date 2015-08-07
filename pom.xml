@@ -5,7 +5,6 @@
 	<artifactId>crashFinder</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>crashFinder</name>
-	<packaging>jar</packaging>
 	<description>A tool for localising the software regression errors</description>
 	<repositories>
 		<repository>
