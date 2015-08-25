@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindSeed {
-	
-	private boolean passed = false;
-	List<String> lines = new ArrayList<String>();
-	List<String> stackFrames = new ArrayList<String>();
+
+	List<String> lines = new ArrayList<>();
+	List<String> stackFrames = new ArrayList<>();
 	Charset charset = Charset.forName("US-ASCII");
+	private boolean passed = false;
 	
 	public Seed computeSeed (String failedLogFile)
 			throws FileNotFoundException {
-		BufferedReader br = null;
+		BufferedReader br;
 		String line;
 		try {
 			br = new BufferedReader(new FileReader(failedLogFile));
@@ -25,7 +25,7 @@ public class FindSeed {
 		        lines.add(line.replaceAll("^\\s+", ""));
 		    }
 		} catch (IOException x) {
-		    System.err.println();
+			System.err.println("Stack trace log file not found");
 		}
 		
 		for (int i = lines.size()-1; i > 0; i--) {
@@ -36,7 +36,7 @@ public class FindSeed {
 		    	break;
 		    }
 		}
-		String rawSeed = stackFrames.get(stackFrames.size()-4);
+		String rawSeed = stackFrames.get(stackFrames.size() - 1);
 		
 	
 		String classFile = rawSeed.split(".java:")[0].split("\\(")[1];
