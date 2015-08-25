@@ -1,7 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76abb5d8-d50c-46a6-8fb6-12e69abb66cb" name="Default" comment="" />
+    <list default="true" id="76abb5d8-d50c-46a6-8fb6-12e69abb66cb" name="Default" comment="u">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/de.hdu.pvs/crashFinder/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/de.hdu.pvs/crashFinder/pom.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/AbstractInstrumenter.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/AbstractInstrumenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Command$StreamGobbler.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Command$StreamGobbler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Command.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Command.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/experiments/CommonUtils.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/experiments/CommonUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Differencer.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Differencer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/test/FieldDeps.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/test/FieldDeps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Files.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Files.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/FindSeed$Seed.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/FindSeed$Seed.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/FindSeed.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/FindSeed.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Globals$ErrorStreamAssigner.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Globals$ErrorStreamAssigner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Globals.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Globals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/IRStatement.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/IRStatement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/InputMain.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/InputMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumentStats.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumentStats.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$2.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$3.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$4.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$5.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/Instrumenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$2.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$3.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterBench.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Log.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Log.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/MethodTracer$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/MethodTracer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/MethodTracer.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/MethodTracer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/diagnosis/OutputMain.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/diagnosis/OutputMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/diagnosis/Ranker.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/diagnosis/Ranker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/test/SeeCoverage.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/test/SeeCoverage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/ShrikePoint.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/ShrikePoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/SlicerMain.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/SlicerMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Slicing$CG.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Slicing$CG.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Slicing.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/Slicing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/SlicingOutput.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/analysis/SlicingOutput.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/StmtTracer$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/StmtTracer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/StmtTracer.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/StmtTracer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/TestNoChange.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/TestNoChange.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Utils$1.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Utils$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Utils.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/WALAUtils.class" afterPath="$PROJECT_DIR$/target/classes/de/hdu/pvs/crashfinder/util/WALAUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crashFinder-1.0.0-SNAPSHOT-javadoc.jar" afterPath="$PROJECT_DIR$/target/crashFinder-1.0.0-SNAPSHOT-javadoc.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crashFinder-1.0.0-SNAPSHOT-sources.jar" afterPath="$PROJECT_DIR$/target/crashFinder-1.0.0-SNAPSHOT-sources.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crashfinder/crashfinder.jar" afterPath="$PROJECT_DIR$/target/crashfinder/crashfinder.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/AbstractInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/AbstractInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/AbstractInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/AbstractInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Command.StreamGobbler.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Command.StreamGobbler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Command.StreamGobbler.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Command.StreamGobbler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Command.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Command.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Command.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Command.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/CommonUtils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/CommonUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/class-use/CommonUtils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/class-use/CommonUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Differencer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Differencer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Differencer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Differencer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/EveryStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/EveryStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/EveryStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/FieldDeps.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/FieldDeps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/class-use/FieldDeps.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/class-use/FieldDeps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Files.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Files.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Files.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Files.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/FindSeed.Seed.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/FindSeed.Seed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/FindSeed.Seed.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/FindSeed.Seed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/FindSeed.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/FindSeed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/FindSeed.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/FindSeed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Globals.ErrorStreamAssigner.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Globals.ErrorStreamAssigner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Globals.ErrorStreamAssigner.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Globals.ErrorStreamAssigner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Globals.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Globals.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Globals.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Globals.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/IRStatement.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/IRStatement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/IRStatement.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/IRStatement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/InputMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/InputMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/InputMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/InputMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumentStats.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumentStats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumentStats.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumentStats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/Instrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/Instrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/Instrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/Instrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumenterBench.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumenterBench.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumenterBench.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumenterBench.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumenterMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/InstrumenterMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Log.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Log.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Log.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Log.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/MethodTracer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/MethodTracer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/MethodTracer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/MethodTracer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/OutputMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/OutputMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/class-use/OutputMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/class-use/OutputMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/Ranker.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/Ranker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/class-use/Ranker.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/class-use/Ranker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/RelatedStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/RelatedStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/RelatedStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/SeeCoverage.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/SeeCoverage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/class-use/SeeCoverage.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/class-use/SeeCoverage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/ShrikePoint.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/ShrikePoint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/ShrikePoint.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/ShrikePoint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/SlicerMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/SlicerMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/SlicerMain.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/SlicerMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Slicing.CG.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Slicing.CG.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Slicing.CG.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Slicing.CG.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Slicing.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/Slicing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Slicing.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/Slicing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/SlicingOutput.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/SlicingOutput.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/SlicingOutput.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/class-use/SlicingOutput.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/StmtTracer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/StmtTracer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/StmtTracer.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/StmtTracer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/TestNoChange.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/TestNoChange.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/TestNoChange.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/TestNoChange.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/TestStmtInstrumenter.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/class-use/TestStmtInstrumenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.java" afterPath="$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Utils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/Utils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Utils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/Utils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/WALAUtils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/WALAUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/WALAUtils.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/class-use/WALAUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" afterPath="$PROJECT_DIR$/target/apidocs/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" afterPath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" afterPath="$PROJECT_DIR$/target/apidocs/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" afterPath="$PROJECT_DIR$/target/apidocs/index-all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/index.html" afterPath="$PROJECT_DIR$/target/apidocs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/analysis/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/diagnosis/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/experiments/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/instrument/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/test/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/de/hdu/pvs/crashfinder/util/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" afterPath="$PROJECT_DIR$/target/apidocs/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="regressionFaultLocalizer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,12 +198,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FindSeed.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/analysis/FindSeed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InstrumenterMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +223,8 @@
       <file leaf-file-name="TestStmtInstrumenter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="60" />
+            <state vertical-scroll-proportion="1.0381862">
+              <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -61,13 +234,16 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -101,8 +277,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="64" />
     <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="980" />
+    <option name="width" value="1537" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -127,6 +303,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,7 +320,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="regressionFaultLocalizer-maven" />
+              <option name="myItemId" value="crashfinder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -151,7 +330,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="regressionFaultLocalizer-maven" />
+              <option name="myItemId" value="crashfinder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regressionFaultLocalizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crashfinder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -169,29 +362,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="regressionFaultLocalizer-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="crashfinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regressionFaultLocalizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regressionFaultLocalizer-maven" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -209,9 +380,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,7 +390,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.InstrumenterMain">
+  <component name="RunManager" selected="Maven.crashFinderBuild">
     <configuration default="false" name="InstrumenterMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -418,33 +586,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="crashFinderBuild" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="install" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map>
-                <entry key="skipTests" value="false" />
-              </map>
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
     <configuration default="false" name="SlicerMain" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -465,10 +606,37 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="crashFinderBuild" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map>
+                <entry key="skipTests" value="false" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Maven.crashFinderBuild" />
-      <item index="1" class="java.lang.String" itemvalue="Application.SlicerMain" />
-      <item index="2" class="java.lang.String" itemvalue="Application.InstrumenterMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.SlicerMain" />
+      <item index="1" class="java.lang.String" itemvalue="Application.InstrumenterMain" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.crashFinderBuild" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -490,33 +658,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="980" extended-state="6" />
-    <editor active="false" />
+    <frame x="64" y="-4" width="1537" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30080864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296417" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30032572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32884902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296417" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -551,7 +719,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/analysis/SlicerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -583,7 +787,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -615,7 +821,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -647,7 +855,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,7 +889,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -711,7 +923,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -770,11 +984,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -786,18 +1002,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/InstrumenterMain.java">
+    <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/analysis/FindSeed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/hdu/pvs/crashfinder/instrument/TestStmtInstrumenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="60" />
+        <state vertical-scroll-proportion="1.0381862">
+          <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
           <folding />
         </state>
       </provider>

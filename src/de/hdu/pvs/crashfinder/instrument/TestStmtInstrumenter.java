@@ -70,24 +70,31 @@ public class TestStmtInstrumenter extends TestCase {
 
 			br = new BufferedReader(new FileReader(diff));
 			while ((sCurrentLine = br.readLine()) != null) {
-				Pattern p = Pattern.compile("\\+++ /home/felix/2/(.*?).java");
+				//Pattern p = Pattern.compile("\\+++ /home/felix/2/(.*?).java");
+				Pattern p = Pattern.compile("\\+++ (.*)/(.*?).java");
 				Matcher m = p.matcher(sCurrentLine);
 				if (m.find()) {
-					matching.add(m.group());
+					String strFound = m.group(2);
+					matching.add(strFound);
+					diffClass.add(strFound);
+					//this.buildListener.getLogger().println("Str found: " + strFound);
+					output.printf("%s\r\n", strFound);
 				}
 			}
-			for (String line : matching) {
-				line = line.replaceAll("\\+++ /home/felix/2/", "");
-				line = line.replaceAll("\\.java", "");
-				System.out.println(line);
-				line = line.replace("/", ".");
-				// sCurrentLine = sCurrentLine.replace("/", ".");
-				diffClass.add(line);
-				output.printf("%s\r\n", line);
-			}
+			/**
+			 for (String line : matching) {
+			 //line = line.replaceAll("\\+++ /home/felix/2/", "");
+			 line = line.replaceAll("\\+++ (.*)/2/", "");
+			 line = line.replaceAll("\\.java", "");
+			 System.out.println(line);
+			 line = line.replace("/", ".");
+			 // sCurrentLine = sCurrentLine.replace("/", ".");
+			 diffClass.add(line);
+			 output.printf("%s\r\n", line);
+			 }**/
 
 		} catch (IOException e) {
-			// oh no!
+			System.out.println("Diff file not found");
 		} finally {
 			if (output != null) {
 				output.close();
