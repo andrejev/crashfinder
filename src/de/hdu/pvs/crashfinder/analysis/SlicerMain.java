@@ -28,14 +28,16 @@ public class SlicerMain {
 			WalaException, IOException, CancelException,
 			InvalidClassFileException {
 
-		String classPath = "/home/felix/hadoop/Hdfs3856/2/share/hadoop/hdfs/hadoop-hdfs-3.0.0-SNAPSHOT.jar";
+		String classPath = "/home/felix/hadoop/hdfs3856/2/share/hadoop/hdfs/hadoop-hdfs-3.0.0-SNAPSHOT.jar";
 		String fileName = "dumpslice.txt";
 		String mainClass = "Lorg/apache/hadoop/hdfs/server/namenode/NameNode";
 		String exclusionFile = "src/resources/JavaAllExclusions.txt";
-		String failedLogFile = "src/resources/stackTraceFail.log";
+		String failedLogFile = "src/resources/log-stacktrace.txt";
 		FindSeed computeSeed= new FindSeed();
 		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
 		String seedClass = computeSeed.computeSeed(failedLogFile).getSeedClass();
+		System.out.println(seedClass+":"+lineNumber);
+
 
 		Slicing helper = new Slicing(classPath, mainClass, exclusionFile);
 		helper.CallGraphBuilder();
