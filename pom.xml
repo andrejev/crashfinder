@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.heiqs</groupId>
 	<artifactId>crashFinder</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>crashFinder</name>
@@ -49,7 +49,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/heiqs/crashfinder.git</connection>
 		<developerConnection>scm:git:https://github.com/heiqs/crashfinder.git</developerConnection>
-		<tag>crashFinder-1.0.0</tag>
+		<tag>crashFinder-1.0.0-SNAPSHOT</tag>
 	</scm>
 
 	<repositories>
