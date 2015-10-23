@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bitbucket.buglocatorteam</groupId>
 	<artifactId>crashFinder</artifactId>
@@ -49,9 +48,9 @@
 
 	<scm>
 		<connection>scm:git:git@bitbucket.org/mohammad_gh/crashfinder.git</connection>
-		<developerConnection>scm:git:git@@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
+		<developerConnection>scm:git:git@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
 		<url>git@bitbucket.org/mohammad_gh/crashfinder.git</url>
-		<tag>HEAD</tag>
+		<tag>crashFinder-1.0.0</tag>
 	</scm>
 
 	<repositories>
@@ -218,6 +217,9 @@
 				<version>2.5.2</version>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<checkModificationExcludes>
+						<checkModificationExclude>pom.xml</checkModificationExclude>
+					</checkModificationExcludes>
 				</configuration>
 			</plugin>
 		</plugins>
