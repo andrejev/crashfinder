@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bitbucket.buglocatorteam</groupId>
 	<artifactId>crashFinder</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>crashFinder</name>
@@ -49,7 +49,7 @@
 	<scm>
 		<connection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</connection>
 		<developerConnection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
-		<tag>crashFinder-1.0.0-SNAPSHOT</tag>
+		<tag>crashFinder-1.0.0</tag>
 	</scm>
 
 	<repositories>
