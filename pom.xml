@@ -30,25 +30,21 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/mrghanavati/crashfinder/issues</url>
+		<url>https://github.com/heiqs/crashfinder/issues</url>
 	</issueManagement>
 
 	<distributionManagement>
 		<snapshotRepository>
-			<id>sonatype-snapshots</id>
+			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Nexus Release Repository</name>
-			<url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-		<downloadUrl>https://oss.sonatype.org/content/repositories/snapshots/com/github/heiqs</downloadUrl>
+
 	</distributionManagement>
 
 	<scm>
 		<connection>scm:git:https://github.com/heiqs/crashfinder.git</connection>
 		<developerConnection>scm:git:https://github.com/heiqs/crashfinder.git</developerConnection>
+		<url>https://github.com/heiqs/crashfinder.git</url>
 		<tag>crashFinder-1.0.0</tag>
 	</scm>
 
