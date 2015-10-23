@@ -47,7 +47,7 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git@bitbucket.org:/mohammad_gh/crashfinder.git</connection>
+		<connection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</connection>
 		<developerConnection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
 		<tag>crashFinder-1.0.0-SNAPSHOT</tag>
 	</scm>
