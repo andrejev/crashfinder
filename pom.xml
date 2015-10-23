@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bitbucket.buglocatorteam</groupId>
 	<artifactId>crashFinder</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>crashFinder</name>
@@ -30,7 +30,7 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://bitbucket.org/mohammad_gh/crashfinder.git/issues</url>
+		<url>https://github.com/mrghanavati/crashfinder/issues</url>
 	</issueManagement>
 
 	<distributionManagement>
@@ -47,8 +47,8 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</connection>
-		<developerConnection>scm:git:https://mohammad_gh@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
+		<connection>scm:git:https://github.com/mrghanavati/crashfinder.git</connection>
+		<developerConnection>scm:git:https://github.com/mrghanavati/crashfinder.git</developerConnection>
 		<tag>crashFinder-1.0.0</tag>
 	</scm>
 
