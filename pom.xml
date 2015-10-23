@@ -3,7 +3,7 @@
 	<groupId>com.github.heiqs</groupId>
 	<artifactId>crashFinder</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<name>crashFinder</name>
 	<description>A tool for localizing the software regression errors</description>
@@ -59,20 +59,6 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-		<!-- For Quick FIX -->
-		<repository>
-			<id>MarketceteraRepo</id>
-			<url>http://repo.marketcetera.org/maven</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<!-- https://github.com/fatshotty/socket.io-java-client -->
-		<repository>
-			<id>keytwo.net</id>
-			<name>Keytwo.net Repository</name>
-			<url>http://audiobox.keytwo.net</url>
-		</repository>
 	</repositories>
 
 	<build>
@@ -109,7 +95,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/crashfinder</outputDirectory>
+							<outputDirectory>${basedir}/target/</outputDirectory>
 							<resources>
 								<resource>
 									<directory>resources</directory>
@@ -136,7 +122,7 @@
 						</manifestEntries>
 					</archive>
 
-					<finalName>crashfinder/crashfinder</finalName>
+					<finalName>crashfinder</finalName>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -212,17 +198,7 @@
 				<version>2.3.2</version>
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<checkModificationExcludes>
-						<checkModificationExclude>pom.xml</checkModificationExclude>
-					</checkModificationExcludes>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-scm-plugin</artifactId>
-						<version>1.8.1</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
