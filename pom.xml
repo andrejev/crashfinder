@@ -46,13 +46,6 @@
 		<downloadUrl>https://oss.sonatype.org/content/repositories/snapshots/org/bitbucket/buglocatorteam</downloadUrl>
 	</distributionManagement>
 
-	<scm>
-		<connection>scm:git:git@bitbucket.org/mohammad_gh/crashfinder.git</connection>
-		<developerConnection>scm:git:git@bitbucket.org/mohammad_gh/crashfinder.git</developerConnection>
-		<url>git@bitbucket.org/mohammad_gh/crashfinder.git</url>
-		<tag>crashFinder-1.0.0</tag>
-	</scm>
-
 	<repositories>
 		<repository>
 			<id>sonatype-oss-public</id>
