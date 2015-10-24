@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.heiqs</groupId>
 	<artifactId>crashFinder</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>crashFinder</name>
@@ -34,18 +34,17 @@
 	</issueManagement>
 
 	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</snapshotRepository>
-
+  		<repository>
+    			<id>ossrh</id>
+    			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+  		</repository>
 	</distributionManagement>
 
 	<scm>
 		<connection>scm:git:https://github.com/heiqs/crashfinder.git</connection>
 		<developerConnection>scm:git:https://github.com/heiqs/crashfinder.git</developerConnection>
 		<url>https://github.com/heiqs/crashfinder.git</url>
-		<tag>crashFinder-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<repositories>
