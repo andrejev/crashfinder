@@ -2,12 +2,15 @@ package de.hdu.pvs.crashfinder.analysis;
 
 import java.io.*;
 
+import com.ibm.wala.ipa.slicer.Statement;
+import com.ibm.wala.shrikeCT.InvalidClassFileException;
+
 /**
  * 
  * @author Mohammad Ghanavati Created in November 2015
  */
 
-public class ComputePassingSeed {
+public class FindPassingSeed {
 
 	public String computeSeed(String failingSeed, String diffFile)
 			throws IOException {
@@ -71,5 +74,17 @@ public class ComputePassingSeed {
 				p.getInputStream()));
 		String ret = in.readLine();
 		return ret;
+	}
+	
+	public Statement findSeedStatement(String seed,
+			Slicing slicing) throws IOException, InterruptedException {
+		String[] splitSeed = seed.split(":");
+
+		try {
+			return slicing.extractStatementfromException(splitSeed[0],
+					Integer.parseInt(splitSeed[1]));
+		} catch (InvalidClassFileException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		}
 	}
 }

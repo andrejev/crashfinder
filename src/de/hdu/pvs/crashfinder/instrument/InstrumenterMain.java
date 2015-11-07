@@ -2,14 +2,18 @@ package de.hdu.pvs.crashfinder.instrument;
 
 import java.io.IOException;
 //import java.util.Collection;
+import java.util.Collection;
 import java.util.Properties;
 
 //import analysis.IRStatement;
 
+import com.ibm.wala.ipa.slicer.Statement;
 import com.ibm.wala.util.CancelException;
 import com.ibm.wala.util.WalaException;
 import com.ibm.wala.util.io.CommandLine;
 
+import de.hdu.pvs.crashfinder.analysis.IRStatement;
+import de.hdu.pvs.crashfinder.analysis.Slicing;
 import de.hdu.pvs.crashfinder.analysis.SlicingOutput;
 
 /**
@@ -59,5 +63,25 @@ public class InstrumenterMain {
 			throw new UnsupportedOperationException(
 					"expected command-line to include -instrumented_jar");
 		}
+	}
+	
+	public void instrument(String pathToJar, String pathToInstrJar,
+			Collection<Statement> intersection) {
+		if (intersection.isEmpty()) {
+			throw new IllegalArgumentException("Cannot instrument: "
+					+ "Intersection is empty.");
+		}
+		Collection<IRStatement> irs = Slicing.convert(intersection);
+		SlicingOutput output1 = new SlicingOutput(irs);
+		RelatedStmtInstrumenter instrumenter = new RelatedStmtInstrumenter(
+				output1);
+		try {
+			instrumenter.instrument(pathToJar, pathToInstrJar);
+
+		} catch (Exception e) {
+			RuntimeException re = new RuntimeException(e.getMessage(), e);
+			throw re;
+		}
+		InstrumentStats.showInstrumentationStats();
 	}
 }

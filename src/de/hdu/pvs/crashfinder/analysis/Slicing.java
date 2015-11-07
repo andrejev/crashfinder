@@ -379,4 +379,16 @@ public class Slicing {
 		}
 		return irs;
 	}
+	
+	public Slicing initializeSlicing(final String jar, String pathToExclusionFile) {
+
+		Slicing slicing = null;
+		slicing = new Slicing(jar, "", pathToExclusionFile);
+		slicing.CallGraphBuilder();
+		slicing.setDataDependenceOptions(DataDependenceOptions.NO_BASE_NO_HEAP_NO_EXCEPTIONS);
+		slicing.setControlDependenceOptions(ControlDependenceOptions.NO_EXCEPTIONAL_EDGES);
+		slicing.setContextSensitive(true); // context-insensitive
+		return slicing;
+
+	}
 }

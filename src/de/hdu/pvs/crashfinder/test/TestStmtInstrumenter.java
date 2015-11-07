@@ -18,7 +18,7 @@ import com.ibm.wala.ipa.slicer.Statement;
 import com.ibm.wala.ipa.slicer.Slicer.ControlDependenceOptions;
 import com.ibm.wala.ipa.slicer.Slicer.DataDependenceOptions;
 
-import de.hdu.pvs.crashfinder.analysis.FindSeed;
+import de.hdu.pvs.crashfinder.analysis.FindFailingSeed;
 import de.hdu.pvs.crashfinder.analysis.IRStatement;
 import de.hdu.pvs.crashfinder.analysis.Slicing;
 import de.hdu.pvs.crashfinder.analysis.SlicingOutput;
@@ -41,7 +41,7 @@ public class TestStmtInstrumenter extends TestCase {
 		String exclusionFile = "src/resources/JavaAllExclusions.txt";
 		String failedLogFile = "src/resources/stackTraceFail.log";
 
-		FindSeed computeSeed = new FindSeed();
+		FindFailingSeed computeSeed = new FindFailingSeed();
 		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
 		String seedClass = computeSeed.computeSeed(failedLogFile)
 				.getSeedClass();

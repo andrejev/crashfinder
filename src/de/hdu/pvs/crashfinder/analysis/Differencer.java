@@ -11,7 +11,7 @@ import java.io.PrintStream;
  * @author Mohammad Ghanavati Created in November 2015
  */
 
-public class ExtractionDiffJava {
+public class Differencer {
 
 	public void extractDiffJavaFile(String inputPath, String outputPath,
 			String fileOutput) throws IOException {

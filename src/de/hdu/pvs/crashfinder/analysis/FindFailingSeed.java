@@ -11,7 +11,7 @@ import java.util.List;
 import com.ibm.wala.ipa.slicer.Statement;
 import com.ibm.wala.shrikeCT.InvalidClassFileException;
 
-public class FindSeed {
+public class FindFailingSeed {
 
 	List<String> lines = new ArrayList<>();
 	List<String> stackFrames = new ArrayList<>();

@@ -12,10 +12,10 @@ import com.ibm.wala.util.CancelException;
 import com.ibm.wala.util.WalaException;
 
 import de.hdu.pvs.crashfinder.util.WALAUtils;
-import de.hdu.pvs.crashfinder.analysis.ExtractionDiffJava;
-import de.hdu.pvs.crashfinder.analysis.FindSeed;
+import de.hdu.pvs.crashfinder.analysis.Differencer;
+import de.hdu.pvs.crashfinder.analysis.FindFailingSeed;
 import de.hdu.pvs.crashfinder.analysis.Intersection;
-import de.hdu.pvs.crashfinder.analysis.ComputePassingSeed;
+import de.hdu.pvs.crashfinder.analysis.FindPassingSeed;
 import de.hdu.pvs.crashfinder.analysis.Slicing;
 
 public class TestSlicing {
@@ -37,14 +37,13 @@ public class TestSlicing {
 		String mainClass = "Lorg/apache/hadoop/hdfs/server/namenode/NameNode";
 		String exclusionFile = "src/resources/JavaAllExclusions.txt";
 		String failedLogFile = "src/resources/log-stacktrace.txt";
-		String diffFile = "/home/felix/diff.diff";
 		String inputPath = "/home/felix/.jenkins/jobs/pass/workspace";
 		String outputPath = "/home/felix/.jenkins/jobs/fail/workspace";
 		String fileOutput = "/home/felix/tmp.diff";
-		ExtractionDiffJava computeDiff = new ExtractionDiffJava();
+		Differencer computeDiff = new Differencer();
 		computeDiff.extractDiffJavaFile(inputPath, outputPath, fileOutput);
-		FindSeed computeSeed = new FindSeed();
-		ComputePassingSeed ComputePassingSeed = new ComputePassingSeed();
+		FindFailingSeed computeSeed = new FindFailingSeed();
+		FindPassingSeed ComputePassingSeed = new FindPassingSeed();
 		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
 		String seedClass = computeSeed.computeSeed(failedLogFile)
 				.getSeedClass();

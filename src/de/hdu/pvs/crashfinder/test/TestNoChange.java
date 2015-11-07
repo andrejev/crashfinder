@@ -6,7 +6,7 @@ import com.ibm.wala.ipa.slicer.Statement;
 import com.ibm.wala.ipa.slicer.Slicer.ControlDependenceOptions;
 import com.ibm.wala.ipa.slicer.Slicer.DataDependenceOptions;
 
-import de.hdu.pvs.crashfinder.analysis.FindSeed;
+import de.hdu.pvs.crashfinder.analysis.FindFailingSeed;
 import de.hdu.pvs.crashfinder.analysis.Slicing;
 import de.hdu.pvs.crashfinder.analysis.SlicingOutput;
 import de.hdu.pvs.crashfinder.instrument.InstrumentStats;
@@ -32,7 +32,7 @@ public class TestNoChange extends TestCase {
 		helper.setControlDependenceOptions(ControlDependenceOptions.NO_EXCEPTIONAL_EDGES);
 		helper.setContextSensitive(true); // context-insensitive
 
-		FindSeed computeSeed = new FindSeed();
+		FindFailingSeed computeSeed = new FindFailingSeed();
 		int lineNumber = computeSeed.computeSeed(failedLogFile).getLineNumber();
 		String seedClass = computeSeed.computeSeed(failedLogFile)
 				.getSeedClass();
