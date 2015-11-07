@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="lib"/>
+	<classpathentry including="**/*.java" kind="src" path="lib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
@@ -21,33 +21,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/felix/.m2/repository/org/codehaus/groovy/groovy-all/1.8.9/groovy-all-1.8.9.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.codehaus.groovy"/>
-			<attribute name="maven.artifactId" value="groovy-all"/>
-			<attribute name="maven.version" value="1.8.9"/>
-			<attribute name="maven.scope" value="provided"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/felix/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.google.guava"/>
-			<attribute name="maven.artifactId" value="guava"/>
-			<attribute name="maven.version" value="14.0.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/felix/.m2/repository/com/google/code/javaparser/javaparser/1.0.8/javaparser-1.0.8.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.google.code.javaparser"/>
-			<attribute name="maven.artifactId" value="javaparser"/>
-			<attribute name="maven.version" value="1.0.8"/>
-			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
