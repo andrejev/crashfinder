@@ -23,7 +23,7 @@ public abstract class AbstractInstrumenter {
 	// such as line number, source text, etc.
 	// see TraceAnalyzer for usage example
 
-	public static String SUB_SEP = "%%"; //not used for context separation
+	public static String SUB_SEP = "%%"; // not used for context separation
 	public static String INDEX_SEP = "_index_";
 
 	public void instrument(String inputElement, String outputJar)

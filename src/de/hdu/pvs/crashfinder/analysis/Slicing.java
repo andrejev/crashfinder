@@ -8,7 +8,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-
 //import com.ibm.wala.core.tests.callGraph.CallGraphTestUtil;
 import com.ibm.wala.ipa.callgraph.AnalysisCache;
 import com.ibm.wala.ipa.callgraph.AnalysisOptions;
@@ -20,6 +19,7 @@ import com.ibm.wala.ipa.callgraph.CallGraphStats;
 import com.ibm.wala.ipa.callgraph.Entrypoint;
 import com.ibm.wala.ipa.callgraph.impl.AllApplicationEntrypoints;
 import com.ibm.wala.ipa.callgraph.impl.Util;
+import com.ibm.wala.ipa.callgraph.propagation.InstanceKey;
 import com.ibm.wala.ipa.callgraph.propagation.PointerAnalysis;
 import com.ibm.wala.ipa.cha.ClassHierarchy;
 import com.ibm.wala.ipa.slicer.NormalStatement;
@@ -66,7 +66,7 @@ public class Slicing {
 	public final String mainClass;
 	private String exclusionFile;
 	private boolean contextSensitive = true;
-	private DataDependenceOptions dataOption = DataDependenceOptions.NO_BASE_NO_HEAP;
+	private DataDependenceOptions dataOption = DataDependenceOptions.NO_BASE_NO_HEAP_NO_EXCEPTIONS;
 	private ControlDependenceOptions controlOption = ControlDependenceOptions.NONE;
 	private CISlicer slicer = null;
 	private AnalysisScope scope = null;
@@ -76,7 +76,7 @@ public class Slicing {
 	private AnalysisOptions options = null;
 	private CallGraphBuilder cgb = null;
 	private CallGraph cg = null;
-	private PointerAnalysis pa = null;
+	private PointerAnalysis<InstanceKey> pa = null;
 
 	// private Statement s;
 
@@ -92,18 +92,18 @@ public class Slicing {
 		try {
 			// create an analysis scope representing the appJar as a J2SE
 			// application
-			this.scope = AnalysisScopeReader
-					.makeJavaBinaryAnalysisScope(this.classPath,
-							(new FileProvider()).getFile(this.exclusionFile));
+			this.scope = AnalysisScopeReader.makeJavaBinaryAnalysisScope(
+					this.classPath,
+					(new FileProvider()).getFile(this.exclusionFile));
 
 			// build the class hierarchy
 			this.cha = ClassHierarchy.make(scope);
 			// this.entrypoints = com.ibm.wala.ipa.callgraph.impl.Util
 			// .makeMainEntrypoints(scope, cha, mainClass);
 			this.entrypoints = new AllApplicationEntrypoints(scope, cha);
-			//this.options = CallGraphTestUtil.makeAnalysisOptions(scope,
-			//		entrypoints);
-			this.options =  new AnalysisOptions(scope, entrypoints);
+			// this.options = CallGraphTestUtil.makeAnalysisOptions(scope,
+			// entrypoints);
+			this.options = new AnalysisOptions(scope, entrypoints);
 
 			// build the call graph
 			System.out.println("Building call graph...");
@@ -143,7 +143,7 @@ public class Slicing {
 		return this.cg;
 	}
 
-	public PointerAnalysis getPointerAnalysis() {
+	public PointerAnalysis<InstanceKey> getPointerAnalysis() {
 		return this.pa;
 	}
 
@@ -183,9 +183,9 @@ public class Slicing {
 	}
 
 	public Collection<Statement> computeConetxtSensitiveSlice(Statement seed,
-			CallGraph cg, PointerAnalysis pa, DataDependenceOptions dOptions,
-			ControlDependenceOptions cOptions) throws IllegalArgumentException,
-			CancelException {
+			CallGraph cg, PointerAnalysis<InstanceKey> pa,
+			DataDependenceOptions dOptions, ControlDependenceOptions cOptions)
+			throws IllegalArgumentException, CancelException {
 
 		checkCG();
 		System.err.println("Seed statement in context-sensitive slicing: "
@@ -206,7 +206,7 @@ public class Slicing {
 	}
 
 	public Collection<Statement> computeConetxtInsensitiveThinSlice(
-			Statement seed, CallGraph cg, PointerAnalysis pa,
+			Statement seed, CallGraph cg, PointerAnalysis<InstanceKey> pa,
 			DataDependenceOptions dOptions, ControlDependenceOptions cOptions)
 			throws IllegalArgumentException, CancelException {
 		checkCG();

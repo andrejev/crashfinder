@@ -28,9 +28,9 @@ import de.hdu.pvs.crashfinder.util.Globals;
 import de.hdu.pvs.crashfinder.util.Utils;
 import de.hdu.pvs.crashfinder.util.WALAUtils;
 
-
 /**
- * Instruments every statement in the specific methods which are in the slicing output.
+ * Instruments every statement in the specific methods which are in the slicing
+ * output.
  * */
 public class RelatedStmtInstrumenter extends AbstractInstrumenter {
 

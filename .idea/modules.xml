@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/regressionFaultLocalizer.iml" filepath="$PROJECT_DIR$/regressionFaultLocalizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/target/checkout/checkout.iml" filepath="$PROJECT_DIR$/target/checkout/checkout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crashFinder.iml" filepath="$PROJECT_DIR$/crashFinder.iml" />
     </modules>
   </component>
 </project>

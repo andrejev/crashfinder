@@ -35,41 +35,38 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-
-//import com.ibm.wala.ipa.callgraph.CGNode;
-
 public class Utils {
-	
+
 	public static void checkNotNull(Object o) {
 		checkNotNull(o, null);
 	}
-	
+
 	public static void checkNotNull(Object o, String msg) {
-		if(o == null) {
+		if (o == null) {
 			throw new RuntimeException(msg);
 		}
 	}
-	
+
 	public static void checkTrue(boolean cond) {
 		checkTrue(cond, "");
 	}
-	
+
 	public static void checkTrue(boolean cond, String msg) {
-		if(!cond) {
+		if (!cond) {
 			throw new RuntimeException(msg);
 		}
 	}
-	
+
 	public static String translateSlashToDot(String str) {
 		assert str != null;
 		return str.replace('/', '.');
 	}
-	
+
 	public static String translateDotToSlash(String str) {
 		assert str != null;
 		return str.replace('.', '/');
 	}
-	
+
 	public static boolean isPrimitiveType(String type) {
 		try {
 			getJVMDescriptorForPrimitiveType(type);
@@ -78,7 +75,7 @@ public class Utils {
 			return false;
 		}
 	}
-	
+
 	public static String getJVMDescriptorForPrimitiveType(String type) {
 		if (type.equals("boolean")) {
 			return "Z";
@@ -100,46 +97,48 @@ public class Utils {
 			throw new RuntimeException("Unexpected primitive type: " + type);
 		}
 	}
-	
+
 	public static void checkDirExistence(String dir) {
 		File f = new File(dir);
-		if(!f.isDirectory()) {
+		if (!f.isDirectory()) {
 			throw new RuntimeException("File: " + f + " is not a dir");
 		}
-		if(!f.exists()) {
+		if (!f.exists()) {
 			throw new RuntimeException("Dir: " + f + " does not exist");
 		}
 	}
-	
+
 	public static void checkFileExistence(String dir) {
 		File f = new File(dir);
-		if(f.isDirectory()) {
+		if (f.isDirectory()) {
 			throw new RuntimeException("File: " + f + " is  a dir");
 		}
-		if(!f.exists()) {
+		if (!f.exists()) {
 			throw new RuntimeException("File: " + f + " does not exist");
 		}
 	}
-	
+
 	public static <T> void checkNoNull(T[] ts) {
-		for(int i = 0; i < ts.length; i++) {
-			if(ts[i] == null) {
+		for (int i = 0; i < ts.length; i++) {
+			if (ts[i] == null) {
 				throw new RuntimeException("The " + i + "-th element is null.");
 			}
 		}
 	}
-	
+
 	public static void checkPathEntryExistence(String path) {
 		String[] entries = path.split(Globals.pathSep);
-		for(String entry : entries) {
+		for (String entry : entries) {
 			File f = new File(entry);
-			if(!f.exists()) {
-				throw new RuntimeException("The entry: " + entry + " does not exist.");
+			if (!f.exists()) {
+				throw new RuntimeException("The entry: " + entry
+						+ " does not exist.");
 			}
 		}
 	}
-	
-	//must wrap in a try - catch, since this will be used in a field initializer
+
+	// must wrap in a try - catch, since this will be used in a field
+	// initializer
 	public static List<String> getClassesRecursive(String dir) {
 		try {
 			List<String> fileNames = new LinkedList<String>();
@@ -151,77 +150,83 @@ public class Utils {
 			throw new Error(e);
 		}
 	}
-	
-	//find all class files
-	public static List<String> getJars(String dir, boolean recursive) throws FileNotFoundException {
-		if(!recursive) {
+
+	// find all class files
+	public static List<String> getJars(String dir, boolean recursive)
+			throws FileNotFoundException {
+		if (!recursive) {
 			return getJars(dir);
 		} else {
 			List<String> fileNames = new LinkedList<String>();
-			for(File f : Files.getFileListing(new File(dir), ".jar") ) {
+			for (File f : Files.getFileListing(new File(dir), ".jar")) {
 				fileNames.add(f.getAbsolutePath());
 			}
 			return fileNames;
 		}
 	}
-	
-	//find all jar files, not this is not recursive
+
+	// find all jar files, not this is not recursive
 	public static List<String> getJars(String dir) {
 		List<String> files = Files.findFilesInDir(dir, null, ".jar");
 		List<String> fullPaths = new LinkedList<String>();
-		for(String file : files) {
+		for (String file : files) {
 			fullPaths.add(dir + Globals.fileSep + file);
 		}
-		//System.out.println(fullPaths);
+		// System.out.println(fullPaths);
 		return fullPaths;
 	}
-	
-	public static Collection<String> extractClassFromPlugXMLFiles(String...fileNames) {
+
+	public static Collection<String> extractClassFromPlugXMLFiles(
+			String... fileNames) {
 		Collection<String> classNames = new LinkedHashSet<String>();
-		
-		for(String fileName : fileNames) {
-			if(!fileName.endsWith(".xml")) {
-				throw new RuntimeException("The file is not an XML file: " + fileName);
+
+		for (String fileName : fileNames) {
+			if (!fileName.endsWith(".xml")) {
+				throw new RuntimeException("The file is not an XML file: "
+						+ fileName);
 			}
 			String content = Files.readWholeAsString(fileName);
 			Collection<String> classes = extractClasses(content);
 			classNames.addAll(classes);
 		}
-		
+
 		return classNames;
 	}
-	
-	public static Collection<String> extractClassFromPluginXML(String pluginJarFile) throws IOException {
-		if(!pluginJarFile.endsWith(".jar")) {
-			throw new RuntimeException("The input file: " + pluginJarFile + " is not a jar file.");
+
+	public static Collection<String> extractClassFromPluginXML(
+			String pluginJarFile) throws IOException {
+		if (!pluginJarFile.endsWith(".jar")) {
+			throw new RuntimeException("The input file: " + pluginJarFile
+					+ " is not a jar file.");
 		}
 		String content = getPluginXMLContent(pluginJarFile);
-		if(content != null) {
+		if (content != null) {
 			return extractClasses(content);
 		} else {
-		    return Collections.<String>emptySet(); 
+			return Collections.<String> emptySet();
 		}
 	}
-	
-	//be aware, this can return null
-	public static String getPluginXMLContent(String jarFilePath) throws IOException {
+
+	// be aware, this can return null
+	public static String getPluginXMLContent(String jarFilePath)
+			throws IOException {
 		ZipFile jarFile = new ZipFile(jarFilePath);
 		ZipEntry entry = jarFile.getEntry("plugin.xml");
-		if(entry == null) {
+		if (entry == null) {
 			return null;
 		}
-		BufferedReader in = new BufferedReader(
-				new InputStreamReader(jarFile.getInputStream(entry)));
+		BufferedReader in = new BufferedReader(new InputStreamReader(
+				jarFile.getInputStream(entry)));
 		StringBuilder sb = new StringBuilder();
 		String line = in.readLine();
-		while(line != null) {
-		    sb.append(line);
-		    sb.append(Globals.lineSep);
-		    line = in.readLine();
+		while (line != null) {
+			sb.append(line);
+			sb.append(Globals.lineSep);
+			line = in.readLine();
 		}
 		return sb.toString();
 	}
-	
+
 	public static Collection<String> extractClasses(String xmlContent) {
 		final Set<String> classList = new LinkedHashSet<String>();
 		try {
@@ -229,13 +234,14 @@ public class Utils {
 			SAXParser saxParser = factory.newSAXParser();
 			DefaultHandler handler = new DefaultHandler() {
 				public void startElement(String uri, String localName,
-						String qName, Attributes attributes) throws SAXException {
-					if(attributes != null) {
-					    for(int i = 0; i < attributes.getLength(); i++) {
-						    if(attributes.getQName(i).equals("class")) {
-							    classList.add(attributes.getValue(i));
-						    }
-					    }
+						String qName, Attributes attributes)
+						throws SAXException {
+					if (attributes != null) {
+						for (int i = 0; i < attributes.getLength(); i++) {
+							if (attributes.getQName(i).equals("class")) {
+								classList.add(attributes.getValue(i));
+							}
+						}
 					}
 				}
 			};
@@ -248,12 +254,12 @@ public class Utils {
 		}
 		return classList;
 	}
-	
+
 	public static String concatenate(Iterable<String> strs, String sep) {
 		StringBuilder sb = new StringBuilder();
 		int count = 0;
-		for(String str : strs) {
-			if(count != 0) {
+		for (String str : strs) {
+			if (count != 0) {
 				sb.append(sep);
 			}
 			sb.append(str);
@@ -261,12 +267,12 @@ public class Utils {
 		}
 		return sb.toString();
 	}
-	
+
 	public static String concatenate(String[] strs, String sep) {
 		StringBuilder sb = new StringBuilder();
 		int count = 0;
-		for(String str : strs) {
-			if(count != 0) {
+		for (String str : strs) {
+			if (count != 0) {
 				sb.append(sep);
 			}
 			sb.append(str);
@@ -274,12 +280,12 @@ public class Utils {
 		}
 		return sb.toString();
 	}
-	
+
 	public static String conToPath(List<String> strs) {
 		StringBuilder sb = new StringBuilder();
 		int count = 0;
-		for(String str : strs) {
-			if(count != 0) {
+		for (String str : strs) {
+			if (count != 0) {
 				sb.append(Globals.pathSep);
 			}
 			sb.append(str);
@@ -287,81 +293,84 @@ public class Utils {
 		}
 		return sb.toString();
 	}
-	
+
 	public static <T> boolean includedIn(T target, T[] array) {
-		if(target == null) {
+		if (target == null) {
 			throw new RuntimeException("target can not be null.");
 		}
-		for(T elem : array) {
-			if(elem != null && elem.equals(target)) {
-				return true;
-			}
-		}
-		return false;
- 	}
-	
-	public static boolean startWith(String t, String[] prefix) {
-		for(String p : prefix) {
-			if(t.startsWith(p)) {
+		for (T elem : array) {
+			if (elem != null && elem.equals(target)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
+	public static boolean startWith(String t, String[] prefix) {
+		for (String p : prefix) {
+			if (t.startsWith(p)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public static <T> Collection<T> iterableToCollection(Iterable<T> ts) {
 		Collection<T> collection = new LinkedList<T>();
-		for(T t : ts) {
+		for (T t : ts) {
 			collection.add(t);
 		}
 		return collection;
- 	}
-	
+	}
+
 	public static <T> void removeRedundant(Collection<T> coll) {
 		Set<T> set = new LinkedHashSet<T>();
 		set.addAll(coll);
 		coll.clear();
 		coll.addAll(set);
 	}
-	
+
 	public static <T> Iterable<T> returnUniqueIterable(Iterable<T> coll) {
 		Set<T> set = new LinkedHashSet<T>();
-		for(T t : coll) {
+		for (T t : coll) {
 			set.add(t);
 		}
 		return set;
 	}
-	
-	//check if every element of its is included in all
+
+	// check if every element of its is included in all
 	public static <T> boolean includedIn(Iterable<T> its, Iterable<T> all) {
 		Collection<T> collection_its = iterableToCollection(its);
 		Collection<T> collection_all = iterableToCollection(its);
 		return collection_all.containsAll(collection_its);
 	}
-	
+
 	/** This project-specific methods */
 	public static <T> int countIterable(Iterable<T> c) {
 		int count = 0;
-		for(T t: c) {
+		for (@SuppressWarnings("unused")
+		T t : c) {
 			count++;
 		}
 		return count;
 	}
-	
+
 	public static boolean debug = true;
+
 	public static void debugPrintln(String str) {
-		if(debug) {
+		if (debug) {
 			System.out.println(str);
 		}
 	}
-	
+
 	public static <T> void logCollection(Iterable<T> c) {
 		Log.logln(dumpCollection(c));
 	}
-	
+
 	public static <T> void dumpCollection(Iterable<T> c, PrintStream out) {
 		out.println(dumpCollection(c));
 	}
+
 	public static <T> void dumpCollection(Iterable<T> c, String fileName) {
 		try {
 			Files.writeToFile(dumpCollection(c), fileName);
@@ -369,142 +378,146 @@ public class Utils {
 			throw new RuntimeException(e);
 		}
 	}
+
 	public static <T> String dumpCollection(Iterable<T> c) {
 		StringBuilder sb = new StringBuilder();
 		int num = 0;
-		for(T t : c) {
+		for (T t : c) {
 			sb.append(t);
 			sb.append(Globals.lineSep);
-			num ++;
+			num++;
 		}
 		sb.append("Num in total: " + num);
 		return sb.toString();
 	}
-	
+
 	public static void flushToStd(String[] msgs) {
-        for(String msg : msgs) {
-          System.out.println(msg);
-        }
-    }
-	
+		for (String msg : msgs) {
+			System.out.println(msg);
+		}
+	}
+
 	static Random random = new Random();
-	
+
 	public static int nextRandomInt(int range) {
 		return random.nextInt(range);
 	}
-	
+
 	public static <T> Object[] randomSubArray(T[] array) {
 		Utils.checkTrue(array.length > 0);
 		int length = nextRandomInt(array.length) + 1;
-		if(length == array.length) {
+		if (length == array.length) {
 			return array;
 		}
 		Set<Integer> indexSet = new LinkedHashSet<Integer>();
-		while(indexSet.size() != length) {
+		while (indexSet.size() != length) {
 			indexSet.add(nextRandomInt(array.length));
 		}
 		List<T> elements = new LinkedList<T>();
-		for(Integer index : indexSet) {
+		for (Integer index : indexSet) {
 			elements.add(array[index]);
 		}
 		return elements.toArray();
 	}
-	
+
 	public static <T> String dumpArray(T[] ts) {
-		if(ts == null) {
+		if (ts == null) {
 			return "NULL ARRAY";
 		}
 		StringBuilder sb = new StringBuilder();
 		int num = 0;
-		for(T t : ts) {
+		for (T t : ts) {
 			sb.append(t);
-			if(num != ts.length - 1) {
-			    sb.append(", ");
+			if (num != ts.length - 1) {
+				sb.append(", ");
 			}
-			num ++;
+			num++;
 		}
 		return sb.toString();
 	}
-	
+
 	public static Float average(Collection<Integer> ts) {
 		Utils.checkTrue(ts.size() > 0);
 		Float sum = 0.0f;
-		for(Integer t : ts) {
-			sum += (float)t;
+		for (Integer t : ts) {
+			sum += (float) t;
 		}
-		return sum/ts.size();
+		return sum / ts.size();
 	}
-	
+
 	public static Integer sum(Collection<Integer> ts) {
 		Utils.checkTrue(ts.size() > 0);
 		Integer sum = 0;
-		for(Integer t : ts) {
+		for (Integer t : ts) {
 			sum = sum + t;
 		}
 		return sum;
 	}
-	
-//	public static <K, V> Map<K, V> sortByKey(Map<K, V> map, final boolean increase) {
-//	     List<Entry<K, V>> list = new LinkedList<Entry<K, V>>(map.entrySet());
-//	     Collections.sort(list, new Comparator() {
-//	          public int compare(Object o1, Object o2) {
-//	        	  if(increase) {
-//	        		  return ((Comparable) ((Map.Entry) (o1)).getKey())
-//		              .compareTo(((Map.Entry) (o2)).getKey());
-//	        	  } else {
-//	        		  return ((Comparable) ((Map.Entry) (o2)).getKey())
-//		              .compareTo(((Map.Entry) (o1)).getKey());
-//	        	  }
-//	          }
-//	     });
-//
-//	    Map<K, V> result = new LinkedHashMap<K, V>();
-//	    for (Iterator<Entry<K, V>> it = list.iterator(); it.hasNext();) {
-//	        Map.Entry<K, V> entry = (Map.Entry<K, V>)it.next();
-//	        result.put(entry.getKey(), entry.getValue());
-//	    }
-//	    return result;
-//	}
-	
-//	public static <K, V> Map<K, V> sortByValue(Map<K, V> map, final boolean increase) {
-//	     List<Entry<K, V>> list = new LinkedList<Entry<K, V>>(map.entrySet());
-//	     Collections.sort(list, new Comparator() {
-//	          public int compare(Object o1, Object o2) {
-//	        	  if(increase) {
-//	        		  return ((Comparable) ((Map.Entry) (o1)).getValue())
-//		              .compareTo(((Map.Entry) (o2)).getValue());
-//	        	  } else {
-//	        		  return ((Comparable) ((Map.Entry) (o2)).getValue())
-//		              .compareTo(((Map.Entry) (o1)).getValue());
-//	        	  }
-//	          }
-//	     });
-//
-//	    Map<K, V> result = new LinkedHashMap<K, V>();
-//	    for (Iterator<Entry<K, V>> it = list.iterator(); it.hasNext();) {
-//	        Map.Entry<K, V> entry = (Map.Entry<K, V>)it.next();
-//	        result.put(entry.getKey(), entry.getValue());
-//	    }
-//	    return result;
-//	}
-//	
-//	public static <K, V> List<K> sortByValueAndReturnKeys(Map<K, V> map, final boolean increase) {
-//		Map<K, V> sorted = sortByValue(map, increase);
-//		List<K> list = new LinkedList<K>();
-//		list.addAll(sorted.keySet());
-//		return list;
-//	}
-	
-//	public static <K, V> Map<Integer, K>
-	
+
+	// public static <K, V> Map<K, V> sortByKey(Map<K, V> map, final boolean
+	// increase) {
+	// List<Entry<K, V>> list = new LinkedList<Entry<K, V>>(map.entrySet());
+	// Collections.sort(list, new Comparator() {
+	// public int compare(Object o1, Object o2) {
+	// if(increase) {
+	// return ((Comparable) ((Map.Entry) (o1)).getKey())
+	// .compareTo(((Map.Entry) (o2)).getKey());
+	// } else {
+	// return ((Comparable) ((Map.Entry) (o2)).getKey())
+	// .compareTo(((Map.Entry) (o1)).getKey());
+	// }
+	// }
+	// });
+	//
+	// Map<K, V> result = new LinkedHashMap<K, V>();
+	// for (Iterator<Entry<K, V>> it = list.iterator(); it.hasNext();) {
+	// Map.Entry<K, V> entry = (Map.Entry<K, V>)it.next();
+	// result.put(entry.getKey(), entry.getValue());
+	// }
+	// return result;
+	// }
+
+	// public static <K, V> Map<K, V> sortByValue(Map<K, V> map, final boolean
+	// increase) {
+	// List<Entry<K, V>> list = new LinkedList<Entry<K, V>>(map.entrySet());
+	// Collections.sort(list, new Comparator() {
+	// public int compare(Object o1, Object o2) {
+	// if(increase) {
+	// return ((Comparable) ((Map.Entry) (o1)).getValue())
+	// .compareTo(((Map.Entry) (o2)).getValue());
+	// } else {
+	// return ((Comparable) ((Map.Entry) (o2)).getValue())
+	// .compareTo(((Map.Entry) (o1)).getValue());
+	// }
+	// }
+	// });
+	//
+	// Map<K, V> result = new LinkedHashMap<K, V>();
+	// for (Iterator<Entry<K, V>> it = list.iterator(); it.hasNext();) {
+	// Map.Entry<K, V> entry = (Map.Entry<K, V>)it.next();
+	// result.put(entry.getKey(), entry.getValue());
+	// }
+	// return result;
+	// }
+	//
+	// public static <K, V> List<K> sortByValueAndReturnKeys(Map<K, V> map,
+	// final boolean increase) {
+	// Map<K, V> sorted = sortByValue(map, increase);
+	// List<K> list = new LinkedList<K>();
+	// list.addAll(sorted.keySet());
+	// return list;
+	// }
+
+	// public static <K, V> Map<Integer, K>
+
 	public static String extractClassName(String fullElement) {
 		return fullElement.substring(0, fullElement.lastIndexOf("."));
 	}
-	
+
 	public static String extractElementName(String fullElement) {
 		return fullElement.substring(fullElement.lastIndexOf(".") + 1);
 	}
-	
+
 	public static Class<?> lookupClass(String className) {
 		try {
 			return Class.forName(className);
@@ -512,51 +525,53 @@ public class Utils {
 			throw new Error(e);
 		}
 	}
-	
+
 	public static Field lookupField(String className, String fieldName) {
 		Class<?> clz = Utils.lookupClass(className);
 		return lookupField(clz, fieldName);
-		
+
 	}
-	
+
 	public static Field lookupField(Class<?> clz, String fieldName) {
 		try {
 			Field[] fields = clz.getDeclaredFields();
-			for(Field f : fields) {
-				//System.out.println(f);
-				if(f.getName().equals(fieldName)) {
+			for (Field f : fields) {
+				// System.out.println(f);
+				if (f.getName().equals(fieldName)) {
 					return f;
 				}
 			}
-			throw new Error("Can not find field: " + fieldName + " in " + clz.toString());
+			throw new Error("Can not find field: " + fieldName + " in "
+					+ clz.toString());
 		} catch (Throwable e) {
 			throw new Error(e);
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
-	public static Class<?> loadclass(String classPath, String  className) {
-		// Create a File object on the root of the directory containing the class file
+	public static Class<?> loadclass(String classPath, String className) {
+		// Create a File object on the root of the directory containing the
+		// class file
 		String[] paths = classPath.split(Globals.pathSep);
 		File[] files = new File[paths.length];
-		for(int i = 0; i < paths.length; i++) {
+		for (int i = 0; i < paths.length; i++) {
 			files[i] = new File(paths[i]);
 		}
 
 		try {
-		    // Convert File to a URL
+			// Convert File to a URL
 			URL[] urls = new URL[files.length];
-			for(int i = 0; i < files.length; i++) {
+			for (int i = 0; i < files.length; i++) {
 				urls[i] = files[i].toURL();
 			}
 
-		    // Create a new class loader with the directory
-		    ClassLoader cl = new URLClassLoader(urls);
+			// Create a new class loader with the directory
+			ClassLoader cl = new URLClassLoader(urls);
 
-		    // Load in the class; MyClass.class should be located in
-		    // the directory file:/c:/myclasses/com/mycompany
-		    Class<?> cls = cl.loadClass(className);
-		    return cls;
+			// Load in the class; MyClass.class should be located in
+			// the directory file:/c:/myclasses/com/mycompany
+			Class<?> cls = cl.loadClass(className);
+			return cls;
 		} catch (MalformedURLException e) {
 		} catch (ClassNotFoundException e) {
 		}

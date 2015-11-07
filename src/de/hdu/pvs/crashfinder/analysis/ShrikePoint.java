@@ -19,20 +19,23 @@ import de.hdu.pvs.crashfinder.util.Utils;
  * */
 public class ShrikePoint implements Serializable {
 	private static final long serialVersionUID = 3388049229274456039L;
-	
+
 	private final transient ShrikeBTMethod method;
-	private final String methodSig; /*used for comparison after de-serialization*/
-	
+	private final String methodSig; /*
+									 * used for comparison after
+									 * de-serialization
+									 */
+
 	public final int instructionIndex;
-	
-	//for debugging purpose
+
+	// for debugging purpose
 	public final int lineNum;
 	public final int bcIndex;
 	public final String instructStr;
-	
-	//keep the source text
+
+	// keep the source text
 	private String sourceText = null;
-	
+
 	public ShrikePoint(IRStatement ir) {
 		Statement s = ir.getStatement();
 		Utils.checkTrue(s.getNode().getMethod() instanceof ShrikeBTMethod);
@@ -43,70 +46,71 @@ public class ShrikePoint implements Serializable {
 		this.bcIndex = ir.getBcIndex();
 		instructStr = ir.getStatement().toString();
 	}
-	
-	private ShrikePoint(int instructionIndex, int bcIndex,
-			String methodSig) {
+
+	private ShrikePoint(int instructionIndex, int bcIndex, String methodSig) {
 		this.instructionIndex = instructionIndex;
 		this.bcIndex = bcIndex;
 		this.methodSig = methodSig;
-		//empty
+		// empty
 		this.method = null;
 		this.lineNum = -1;
 		instructStr = null;
 	}
-	
+
 	public static ShrikePoint createMockPoint(int instructionIndex,
 			String methodSig) {
 		return new ShrikePoint(instructionIndex, -1, methodSig);
 	}
-	
+
 	public String getMethodSig() {
 		return this.methodSig;
 	}
-	
+
 	public String getInstructionStr() {
 		return this.instructStr;
 	}
-	
+
 	public int getInstructionIndex() {
 		return this.instructionIndex;
 	}
-	
+
 	public int getSourceLineNum() {
 		return this.lineNum;
 	}
-	
+
 	public void setSourceText(String sourceDir) {
 		Utils.checkTrue(Files.checkDirExistence(sourceDir));
-		String fullClassName = this.methodSig.substring(0, this.methodSig.lastIndexOf("."));
-		String text = Files.fetchLineInFile(sourceDir, fullClassName, this.lineNum);
+		String fullClassName = this.methodSig.substring(0,
+				this.methodSig.lastIndexOf("."));
+		String text = Files.fetchLineInFile(sourceDir, fullClassName,
+				this.lineNum);
 		this.sourceText = text;
 	}
-	
+
 	public String getSourceText() {
 		return this.sourceText;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
-		if(!(o instanceof ShrikePoint)) {
+		if (!(o instanceof ShrikePoint)) {
 			return false;
 		}
-		ShrikePoint sp = (ShrikePoint)o;
+		ShrikePoint sp = (ShrikePoint) o;
 		return this.methodSig.equals(sp.methodSig)
-		    //this.method.equals(sp.method)
-		    && this.instructionIndex == sp.instructionIndex;
+		// this.method.equals(sp.method)
+				&& this.instructionIndex == sp.instructionIndex;
 	}
-	
+
 	@Override
 	public int hashCode() {
-//		return this.method.hashCode() + 13*this.instructionIndex;
-		return this.methodSig.hashCode() + 13*this.instructionIndex;
+		// return this.method.hashCode() + 13*this.instructionIndex;
+		return this.methodSig.hashCode() + 13 * this.instructionIndex;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "instruction index: " + this.instructionIndex
-		    + "  line num: " + this.lineNum + " @ " + this.methodSig;
+		return "instruction index: " + this.instructionIndex + "  line num: "
+				+ this.lineNum + " @ " + this.methodSig;
 	}
 }

@@ -9,7 +9,6 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-
 import com.ibm.wala.shrikeBT.ConstantInstruction;
 import com.ibm.wala.shrikeBT.Constants;
 import com.ibm.wala.shrikeBT.Disassembler;
@@ -31,7 +30,6 @@ import de.hdu.pvs.crashfinder.analysis.SlicingOutput;
 import de.hdu.pvs.crashfinder.util.Globals;
 import de.hdu.pvs.crashfinder.util.Utils;
 import de.hdu.pvs.crashfinder.util.WALAUtils;
-
 
 public class Instrumenter extends AbstractInstrumenter {
 
@@ -100,7 +98,7 @@ public class Instrumenter extends AbstractInstrumenter {
 			}
 		}
 	}
-	
+
 	// full name
 	public void setSkippedClasses(Collection<String> classes) {
 		skippedClasses = new LinkedHashSet<String>();
