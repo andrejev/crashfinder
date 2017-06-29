@@ -39,6 +39,8 @@ public class Intersection {
 					String strFound = m.group();
 					String absPath = strFound.replace("+", "").trim();
 					File javaFile = new File(absPath);
+					if (!javaFile.exist())
+						continue;
 					String packageName = new PackageExtractor(javaFile)
 							.extractPackageName();
 					String fileName = javaFile.getName();
