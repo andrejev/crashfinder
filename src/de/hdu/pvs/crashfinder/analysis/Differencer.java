@@ -1,10 +1,6 @@
 package de.hdu.pvs.crashfinder.analysis;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
+import java.io.*;
 
 /**
  * 
@@ -19,7 +15,7 @@ public class Differencer {
 		String output;
 		File file = new File(fileOutput);
 		Process p = Runtime.getRuntime().exec(
-				"diff -ENwbur" + " " + inputPath + " " + outputPath);
+				new String[]{"diff", "-ENwbur", inputPath, outputPath});
 
 		BufferedReader stdInput = new BufferedReader(new InputStreamReader(
 				p.getInputStream()));

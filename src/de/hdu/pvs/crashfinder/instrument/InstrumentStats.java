@@ -11,4 +11,12 @@ public class InstrumentStats {
 	public static void showInstrumentationStats() {
 		System.out.println(numOfInsertedInstructions);
 	}
+
+	public static int get() {
+		return numOfInsertedInstructions;
+	}
+
+	public static void reset() {
+		numOfInsertedInstructions = 0;
+	}
 }

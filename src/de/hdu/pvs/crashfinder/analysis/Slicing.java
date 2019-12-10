@@ -165,14 +165,10 @@ public class Slicing {
 		System.err.println("Statement: " + seed);
 
 		// compute the slice as a collection of statements
-		try {
-			if (this.contextSensitive) {
-				return computeContextSensitiveBackwardSlice(seed);
-			} else {
-				return this.computeContextInsensitiveBackwardThinSlice(seed);
-			}
-		} catch (Throwable e) {
-			throw new RuntimeException(e);
+		if (this.contextSensitive) {
+			return computeContextSensitiveBackwardSlice(seed);
+		} else {
+			return this.computeContextInsensitiveBackwardThinSlice(seed);
 		}
 	}
 

@@ -51,7 +51,7 @@ public class InstrumenterMain {
 	private void instrument() throws Exception {
 		instrumenter = new Instrumenter(output);
 		instrumenter.instrument(original_jar, instrumented_jar);
-		InstrumentStats.showInstrumentationStats();
+		// InstrumentStats.showInstrumentationStats();
 	}
 
 	static void validateCommandLine(Properties p) {
@@ -82,6 +82,17 @@ public class InstrumenterMain {
 			RuntimeException re = new RuntimeException(e.getMessage(), e);
 			throw re;
 		}
-		InstrumentStats.showInstrumentationStats();
+		// InstrumentStats.showInstrumentationStats();
+	}
+
+	public void instrument(String pathToJar, String pathToInstrJar) {
+		EveryStmtInstrumenter instrumenter = new EveryStmtInstrumenter();
+		try {
+			instrumenter.instrument(pathToJar, pathToInstrJar);
+
+		} catch (Exception e) {
+			RuntimeException re = new RuntimeException(e.getMessage(), e);
+			throw re;
+		}
 	}
 }

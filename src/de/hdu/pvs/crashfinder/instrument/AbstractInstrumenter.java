@@ -29,8 +29,9 @@ public abstract class AbstractInstrumenter {
 	public void instrument(String inputElement, String outputJar)
 			throws Exception {
 		System.out.println("start instrumentating");
+		String reportPath = System.getProperty("crashfinder.report", "report.txt");
 		instrumenter = new OfflineInstrumenter(disasm);
-		Writer w = new BufferedWriter(new FileWriter("report", false));
+		Writer w = new BufferedWriter(new FileWriter(reportPath, false));
 		instrumenter.addInputElement(null, inputElement);
 		instrumenter.setOutputJar(new File(outputJar));
 		instrumenter.setPassUnmodifiedClasses(true);

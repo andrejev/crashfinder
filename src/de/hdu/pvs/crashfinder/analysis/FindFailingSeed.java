@@ -24,7 +24,7 @@ public class FindFailingSeed {
 		try {
 			br = new BufferedReader(new FileReader(failedLogFile));
 			while ((line = br.readLine()) != null) {
-				lines.add(line.replaceAll("^\\s+", ""));
+					lines.add(line.replaceAll("^\\s+", ""));
 			}
 		} catch (IOException x) {
 			System.err.println("Stack trace log file not found");
@@ -38,7 +38,17 @@ public class FindFailingSeed {
 				break;
 			}
 		}
-		String rawSeed = stackFrames.get(stackFrames.size() - 2);
+
+		String rawSeed;
+		if (stackFrames.size() == 0){
+			throw new RuntimeException("Stacktrace does not found or empty!");
+		} else if (stackFrames.size() == 1) {
+			System.err.println("Stacktrace contains one line only!");
+			rawSeed = stackFrames.get(0);
+		} else {
+			rawSeed = stackFrames.get(stackFrames.size() - 2);
+		}
+
 
 		String classFile = rawSeed.split(".java:")[0].split("\\(")[1];
 		int lineNumber = Integer.parseInt(rawSeed.split(".java:")[1]
@@ -51,12 +61,15 @@ public class FindFailingSeed {
 	}
 
 	public Statement findSeedStatementFailing(String pathToStackTrace,
+											  Slicing slicing) throws IOException {
+		return findSeedStatementFailing(computeSeed(pathToStackTrace), slicing);
+	}
+
+	public Statement findSeedStatementFailing(Seed seed,
 			Slicing slicing) throws IOException {
-		int lineNumber = computeSeed(pathToStackTrace).getLineNumber();
-		String seedClass = computeSeed(pathToStackTrace).getSeedClass();
 		try {
-			Statement result = slicing.extractStatementfromException(seedClass,
-					lineNumber);
+			Statement result = slicing.extractStatementfromException(seed.getSeedClass(),
+					seed.getLineNumber());
 			return result;
 		} catch (InvalidClassFileException e) {
 			System.out.println(e.getStackTrace());
@@ -64,15 +77,20 @@ public class FindFailingSeed {
 		}
 	}
 
-	public class Seed {
+	public static class Seed {
 		String seedClass;
 		int lineNumber;
 
-		public Seed(int lineNumber, String seedClass) {
-			super();
-			this.lineNumber = lineNumber;
-			this.seedClass = seedClass;
-		}
+        public Seed(String seed) {
+            String[] class_and_lin = seed.split(":");
+            this.seedClass = class_and_lin[0];
+            this.lineNumber = Integer.parseInt(class_and_lin[1]);
+        }
+
+        public Seed(int lineNumber, String seedClass) {
+            this.lineNumber = lineNumber;
+            this.seedClass = seedClass;
+        }
 
 		public String getSeedClass() {
 			return seedClass;
@@ -88,6 +106,10 @@ public class FindFailingSeed {
 
 		public void setLineNumber(int lineNumber) {
 			this.lineNumber = lineNumber;
+		}
+
+		public String getSeed() {
+			return seedClass + ":" + lineNumber;
 		}
 	}
 }

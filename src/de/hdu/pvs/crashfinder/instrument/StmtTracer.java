@@ -15,6 +15,8 @@ public class StmtTracer {
 	public static StmtTracer tracer = new StmtTracer();
 
 	private StmtTracer() {
+		long currTime = System.currentTimeMillis();
+		final String fileName = System.getProperty("crashfinder.tracer.path", "./stmts_dump_" + currTime + ".txt");
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 			@Override
 			public void run() {
@@ -26,8 +28,6 @@ public class StmtTracer {
 						sb.append(Globals.lineSep);
 					}
 					try {
-						long currTime = System.currentTimeMillis();
-						String fileName = "./stmts_dump_" + currTime + ".txt";
 						System.out.println("Write to file: " + fileName);
 						Files.writeToFile(sb.toString(), fileName);
 					} catch (IOException e) {
